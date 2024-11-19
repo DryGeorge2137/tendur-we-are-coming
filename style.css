@@ -1,0 +1,72 @@
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #eee;
+  overflow: hidden;
+
+  background-image: url('background-image-tendur.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+h2 {
+  font-size: 3em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.countdown {
+  margin: 30px;
+  width: 100%;
+
+  border-radius: 5px;
+  color: white;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.year {
+  font-size: 4em;
+  font-weight: bold;
+}
+
+.countdown div {
+  margin: 30px;
+  font-size: 5em;
+  font-weight: lighter;
+  transform: translate(0px, -20px);
+  position: relative;
+  text-align: center;
+}
+.countdown div::before {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  font-size: 0.4em;
+  letter-spacing: 1px;
+}
+
+.countdown #day::before {
+  content: 'days';
+}
+.countdown #hour::before {
+  content: 'hours';
+}
+.countdown #minute::before {
+  content: 'minutes';
+}
+.countdown #second::before {
+  content: 'seconds';
+}
